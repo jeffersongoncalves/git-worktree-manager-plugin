@@ -4,11 +4,15 @@
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-support-FFDD00?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jeffersongoncalves)
 
+[![JetBrains Marketplace](https://img.shields.io/jetbrains/plugin/v/34860-jsg-worktree-manager.svg)](https://plugins.jetbrains.com/plugin/34860-jsg-worktree-manager)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/34860-jsg-worktree-manager.svg)](https://plugins.jetbrains.com/plugin/34860-jsg-worktree-manager)
+
 > Create and manage git worktrees without leaving your JetBrains IDE.
 
 **JSG Worktree Manager** adds a *Git Worktrees* tool window and VCS menu actions for `git worktree` to every JetBrains IDE (IntelliJ IDEA, PhpStorm, WebStorm, PyCharm, GoLand, ...). It is the JetBrains port of the [JSG Git Worktree Manager](https://github.com/jeffersongoncalves/git-worktree-manager) VS Code extension.
 
 - **Homepage**: [GitHub](https://github.com/jeffersongoncalves/git-worktree-manager-plugin)
+- **Marketplace**: [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/34860-jsg-worktree-manager)
 - **Issues**: [GitHub Issues](https://github.com/jeffersongoncalves/git-worktree-manager-plugin/issues)
 
 ## Features
