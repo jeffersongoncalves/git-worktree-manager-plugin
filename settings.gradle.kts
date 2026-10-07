@@ -1,4 +1,4 @@
-rootProject.name = "git-worktree-manager-plugin"
+rootProject.name = "worktree-manager"
 
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
