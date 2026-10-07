@@ -28,7 +28,7 @@
 
 ### From JetBrains Marketplace
 
-**Settings → Plugins → Marketplace**, search for **"Git Worktree Manager"** and click **Install**.
+**Settings → Plugins → Marketplace**, search for **"Worktree Manager"** and click **Install**.
 
 ### From Disk
 
