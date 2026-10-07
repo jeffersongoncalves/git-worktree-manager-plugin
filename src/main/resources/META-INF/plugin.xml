@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.jeffersongoncalves.gitworktreemanager</id>
-    <name>JSG Git Worktree Manager</name>
+    <name>Git Worktree Manager</name>
     <vendor email="jefferson@jeffersongoncalves.com"
             url="https://github.com/jeffersongoncalves">
         Jefferson Goncalves
