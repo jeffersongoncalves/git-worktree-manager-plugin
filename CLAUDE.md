@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Git Worktree Manager** is a JetBrains plugin (Kotlin) for `git worktree`: a tool window listing worktrees plus actions to create (from an existing or a new branch), open, copy the path of, remove and prune worktrees. It is the JetBrains port of the VS Code extension in `../git-worktree-manager` and keeps the same behaviour and settings.
 
-- **Plugin ID**: `com.jeffersongoncalves.gitworktreemanager`
+- **Plugin ID**: `com.jeffersongoncalves.gitworktree`
 - **Target IDE**: any JetBrains IDE 2024.3+ (builds 243–263.*), depends only on `com.intellij.modules.platform`
 - **Language**: Kotlin (JVM 17), Gradle 8.13, IntelliJ Platform Gradle Plugin 2.x, dev platform IntelliJ IDEA Community 2024.3
 - **Git**: runs the `git` executable from PATH (no Git4Idea dependency), like the VS Code extension

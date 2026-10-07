@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.jeffersongoncalves.gitworktreemanager</id>
+    <id>com.jeffersongoncalves.gitworktree</id>
     <name>Git Worktree Manager</name>
     <vendor email="jefferson@jeffersongoncalves.com"
             url="https://github.com/jeffersongoncalves">
