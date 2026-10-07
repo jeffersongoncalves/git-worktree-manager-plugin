@@ -1,0 +1,79 @@
+<idea-plugin>
+    <id>com.jeffersongoncalves.gitworktreemanager</id>
+    <name>JSG Git Worktree Manager</name>
+    <vendor email="jefferson@jeffersongoncalves.com"
+            url="https://github.com/jeffersongoncalves">
+        Jefferson Goncalves
+    </vendor>
+
+    <description><![CDATA[
+    <h2>Git Worktree Manager — create and manage git worktrees without leaving the IDE</h2>
+    <p>A tool window and VCS menu actions for <code>git worktree</code>: create a worktree from an existing branch or with a new branch, open it in a new window, copy its path, remove it (with a force fallback for dirty trees) and prune stale references.</p>
+
+    <h3>Features</h3>
+    <ul>
+        <li><b>Create from existing branch</b> — pick a local or remote branch and a destination path</li>
+        <li><b>Create with a new branch</b> — name the branch, pick its base and check it out into a new worktree</li>
+        <li><b>Worktrees tool window</b> — every worktree of the repository, main worktree highlighted, locked/prunable badges</li>
+        <li><b>Open, copy path, remove, prune</b> — from the tool window toolbar; double-click opens a worktree</li>
+        <li><b>Settings</b> — default base directory, what to do after creating a worktree, remove confirmation</li>
+    </ul>
+
+    <p>Works in every JetBrains IDE. Requires <code>git</code> on the PATH. Also available for VS Code as <i>JSG Git Worktree Manager</i>.</p>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow
+            id="Git Worktrees"
+            anchor="left"
+            secondary="true"
+            icon="/icons/worktree.svg"
+            factoryClass="com.jeffersongoncalves.gitworktreemanager.ui.WorktreeToolWindowFactory"/>
+
+        <applicationConfigurable
+            parentId="tools"
+            id="com.jeffersongoncalves.gitworktreemanager.settings"
+            displayName="Git Worktree Manager"
+            instance="com.jeffersongoncalves.gitworktreemanager.settings.WorktreeConfigurable"/>
+
+        <notificationGroup
+            id="Git Worktree Manager"
+            displayType="BALLOON"/>
+    </extensions>
+
+    <actions>
+        <group id="GitWorktreeManager.ActionGroup"
+               text="Git Worktrees"
+               description="Manage git worktrees"
+               popup="true"
+               icon="/icons/worktree.svg">
+            <add-to-group group-id="VcsGroups" anchor="last"/>
+
+            <action id="GitWorktreeManager.CreateFromExisting"
+                    class="com.jeffersongoncalves.gitworktreemanager.actions.CreateFromExistingAction"
+                    text="Create Worktree from Existing Branch..."
+                    description="Check out an existing branch into a new worktree"
+                    icon="AllIcons.General.Add"/>
+
+            <action id="GitWorktreeManager.CreateNewBranch"
+                    class="com.jeffersongoncalves.gitworktreemanager.actions.CreateNewBranchAction"
+                    text="Create Worktree with New Branch..."
+                    description="Create a new branch and check it out into a new worktree"
+                    icon="AllIcons.Actions.NewFolder"/>
+
+            <action id="GitWorktreeManager.Prune"
+                    class="com.jeffersongoncalves.gitworktreemanager.actions.PruneAction"
+                    text="Prune Worktrees"
+                    description="Remove references to worktrees that no longer exist"
+                    icon="AllIcons.Actions.GC"/>
+
+            <action id="GitWorktreeManager.Refresh"
+                    class="com.jeffersongoncalves.gitworktreemanager.actions.RefreshAction"
+                    text="Refresh Worktrees"
+                    description="Reload the worktree list"
+                    icon="AllIcons.Actions.Refresh"/>
+        </group>
+    </actions>
+</idea-plugin>
